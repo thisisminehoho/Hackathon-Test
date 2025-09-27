@@ -16,9 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from test1.views import echo
-
+from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('echo/', echo),
+    path("echo/", views.echo, name="echo"),
 ]
+
