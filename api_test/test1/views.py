@@ -1,7 +1,4 @@
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
+from django.http import JsonResponse
 
-@api_view(["POST"])
 def echo(request):
-    user_input = request.data.get("query", "")
-    return Response({"response": f"You said: {user_input}"})
+    return JsonResponse({"message": "Hello from test1!"})
